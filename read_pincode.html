@@ -1,24 +1,47 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Read Pin Code</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Read Pin Code</h1>
-    <form action="/search-pincode" method="GET">
-        <label for="pincode">Enter Pin Code:</label>
-        <input type="text" id="pincode" name="pincode" required>
-        <button type="submit">Search</button>
-    </form>
-
-    <!-- Display search results here -->
-    <div id="search-results">
-        <!-- Results will be populated dynamically -->
+    <div class="container">
+        <h1>Read Pin Code Details</h1>
+        <form action="/read-pincode" method="post">
+            <label for="pincode">Enter Pin Code:</label>
+            <input type="text" id="pincode" name="pincode">
+            <input type="submit" value="Search">
+        </form>
+        <a href="/">Back</a>
+        {{ if . }}
+            <h2>Pin Code Details</h2>
+            <table>
+                <tr>
+                    <th>Pincode</th>
+                    <th>Office Type</th>
+                    <th>Circle Name</th>
+                    <th>Region Name</th>
+                    <th>Division Name</th>
+                    <th>Office Name</th>
+                    <th>Delivery</th>
+                    <th>District</th>
+                    <th>State Name</th>
+                </tr>
+                <tr>
+                    <td>{{ .Pincode }}</td>
+                    <td>{{ .Office_Type }}</td>
+                    <td>{{ .Circle_Name }}</td>
+                    <td>{{ .Region_Name }}</td>
+                    <td>{{ .Division_Name }}</td>
+                    <td>{{ .Office_Name }}</td>
+                    <td>{{ .Delivery }}</td>
+                    <td>{{ .District }}</td>
+                    <td>{{ .StateName }}</td>
+                </tr>
+            </table>
+        {{ end }}
     </div>
-
-    <a href="/">Back to Home</a>
 </body>
 </html>
 

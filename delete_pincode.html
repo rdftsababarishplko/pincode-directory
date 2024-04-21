@@ -1,37 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Delete Pin Code</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Delete Pin Code</h1>
-    <form action="/delete-pincode" method="POST">
-        <!-- Authentication -->
-        <div id="auth-popup">
-            <h2>Authentication Required</h2>
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="id" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </div>
-
-        <!-- Search and Delete -->
-        <div id="delete-details">
-            <label for="pincode">Enter Pin Code:</label>
-            <input type="text" id="pincode" name="pincode" required>
-            <button type="button" onclick="searchPincode()">Search</button>
-            <!-- Display pin code details for deletion -->
-        </div>
-
-        <button type="submit">Delete</button>
-    </form>
-
-    <a href="/">Back to Home</a>
-
-    <script src="/static/script.js"></script>
+    <div class="container">
+        <h1>Delete Pin Code</h1>
+        <form action="/delete-pincode" method="post">
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincode" name="pincode"><br>
+            <input type="submit" value="Delete">
+        </form>
+        <a href="/">Back</a>
+    </div>
 </body>
 </html>
-
-

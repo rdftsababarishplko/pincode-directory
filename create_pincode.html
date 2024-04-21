@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Create Pin Code</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Create Pin Code</h1>
-    <form action="/create-pincode" method="POST">
-        <!-- Authentication -->
-        <div id="auth-popup">
-            <h2>Authentication Required</h2>
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="id" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </div>
-
-        <!-- Pin Code Details -->
-        <div id="pincode-details">
-            <!-- Input fields for pin code details -->
-        </div>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <a href="/">Back to Home</a>
+    <div class="container">
+        <h1>Create Pin Code</h1>
+        <form action="/create-pincode" method="post">
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincode" name="pincode"><br>
+            <label for="officeType">Office Type:</label>
+            <input type="text" id="officeType" name="officeType"><br>
+            <label for="circleName">Circle Name:</label>
+            <input type="text" id="circleName" name="circleName"><br>
+            <label for="regionName">Region Name:</label>
+            <input type="text" id="regionName" name="regionName"><br>
+            <label for="division">Division:</label>
+            <input type="text" id="division" name="division"><br>
+            <label for="officeName">Office Name:</label>
+            <input type="text" id="officeName" name="officeName"><br>
+            <label for="delivery">Delivery:</label>
+            <input type="text" id="delivery" name="delivery"><br>
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district"><br>
+            <label for="stateName">State Name:</label>
+            <input type="text" id="stateName" name="stateName"><br>
+            <input type="submit" value="Create">
+        </form>
+        <a href="/">Back</a>
+    </div>
 </body>
 </html>
-
-

@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Pin Code</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Update Pin Code</h1>
         <form action="/update-pincode" method="post">
-            <label for="pincode">Pin Code:</label>
-            <input type="text" id="pincode" name="pincode" value="{{ .Pincode }}" readonly><br>
-            <!-- Input fields for updating pin code details -->
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Login">
+            
+            <!-- Hidden field to store the pin code being updated -->
+            <input type="hidden" name="pincode" value="{{ .Pincode }}">
+            
+            <!-- Fields to update pin code details -->
             <label for="officeType">Office Type:</label>
             <input type="text" id="officeType" name="officeType" value="{{ .Office_Type }}"><br>
             <label for="circleName">Circle Name:</label>
@@ -28,13 +34,12 @@
             <input type="text" id="district" name="district" value="{{ .District }}"><br>
             <label for="stateName">State Name:</label>
             <input type="text" id="stateName" name="stateName" value="{{ .StateName }}"><br>
-            <!-- Add other fields for updating pin code details -->
+            
+            <!-- Additional fields can be added based on your Pincode struct -->
+            
             <input type="submit" value="Update">
         </form>
         <a href="/">Back</a>
     </div>
 </body>
 </html>
-
-
-
