@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Pin Code</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Create Pin Code</h1>
+    <form action="/create-pincode" method="POST">
+        <!-- Authentication -->
+        <div id="auth-popup">
+            <h2>Authentication Required</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </div>
+
+        <!-- Pin Code Details -->
+        <div id="pincode-details">
+            <!-- Input fields for pin code details -->
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
+

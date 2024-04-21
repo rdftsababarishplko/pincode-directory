@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Pin Code</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Update Pin Code</h1>
+    <form action="/update-pincode" method="POST">
+        <!-- Authentication -->
+        <div id="auth-popup">
+            <h2>Authentication Required</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </div>
+
+        <!-- Search and Update -->
+        <div id="update-details">
+            <label for="pincode">Enter Pin Code:</label>
+            <input type="text" id="pincode" name="pincode" required>
+            <button type="button" onclick="searchPincode()">Search</button>
+            <!-- Display pin code details for update -->
+        </div>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <a href="/">Back to Home</a>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+

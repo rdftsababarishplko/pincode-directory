@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Pin Code</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Read Pin Code</h1>
+    <form action="/search-pincode" method="GET">
+        <label for="pincode">Enter Pin Code:</label>
+        <input type="text" id="pincode" name="pincode" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display search results here -->
+    <div id="search-results">
+        <!-- Results will be populated dynamically -->
+    </div>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
